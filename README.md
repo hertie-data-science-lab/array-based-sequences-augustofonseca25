@@ -1,3 +1,10 @@
+Authors: Augusto Fonseca and Rodrigo Dornelles
+
+Augusto Fonseca (github augustofonseca25) | email: 225984@students.hertie-school.org 
+Rodrigo Dornelles (github rfdornelles) | email: 228446@students.hertie-school.org
+
+
+
 # CaesarCipher
 
 The Caesar cipher involves replacing each letter in a message with the letter that is a certain number of letters after it in the alphabet. So, in an English message, we might replace each A with D, each B with E, each C with F, and so on, if shifting by three characters. We continue this approach all the way up to W, which is replaced with Z. Then, we let the substitution pattern wrap around, so that we replace X with A, Y with B, and Z with C.
