@@ -1,6 +1,6 @@
 Authors: Augusto Fonseca and Rodrigo Dornelles
 
-Augusto Fonseca (github augustofonseca25) | email: 225984@students.hertie-school.org 
+Augusto Fonseca (github augustofonseca25) | email: 225984@students.hertie-school.org
 Rodrigo Dornelles (github rfdornelles) | email: 228446@students.hertie-school.org
 
 
