@@ -8,9 +8,9 @@ class CaesarCipher:
 
     # define an attribute key to identify the parameter that will be used to encrypt the message
     def __init__(self, key):
-        self.key = key # key used to cipher the message - integer
-        self.lw_dict = {chr(i+96):i for i in range(1,27)} # create a dictionary to convert lower case characters to an integer
-        self.up_dict = {chr(i+64):i for i in range(1,27)} # create a dictionary to convert upper case characters to an integer
+        self.__key = key # key used to cipher the message - integer
+        self.__lw_dict = {chr(i+96):i for i in range(1,27)} # create a dictionary to convert lower case characters to an integer
+        self.__up_dict = {chr(i+64):i for i in range(1,27)} # create a dictionary to convert upper case characters to an integer
 
     # Method to convert the original string message in a list
     def str_to_list(self, original_str):
@@ -25,14 +25,14 @@ class CaesarCipher:
     def convert_chars(self, letter, option):
         # compare to check if the char is uppercase and find it on the dictionary
         if letter.isupper():  # if it`s uppercase
-            if option: coded_index = (self.up_dict[letter] + self.key) % 26 # Add the key to encrypt
-            else: coded_index = (self.up_dict[letter] - self.key) % 26 # subtract the key to decrypt
-            return list(self.up_dict)[coded_index-1] #return the value of the dictionary for the encrypted index
+            if option: coded_index = (self.__up_dict[letter] + self.__key) % 26 # Add the key to encrypt
+            else: coded_index = (self.__up_dict[letter] - self.__key) % 26 # subtract the key to decrypt
+            return list(self.__up_dict)[coded_index-1] #return the value of the dictionary for the encrypted index
 
         elif letter.islower():  # compare to check if the char is lowercase and find it on the dictionary
-            if option: coded_index = (self.lw_dict[letter] + self.key) % 26 # Add the key to encrypt
-            else: coded_index = (self.lw_dict[letter] - self.key) % 26 # subtract the key to decrypt
-            return list(self.lw_dict)[coded_index-1] #return the value of the dictionary for the encrypted index
+            if option: coded_index = (self.__lw_dict[letter] + self.__key) % 26 # Add the key to encrypt
+            else: coded_index = (self.__lw_dict[letter] - self.__key) % 26 # subtract the key to decrypt
+            return list(self.__lw_dict)[coded_index-1] #return the value of the dictionary for the encrypted index
         else:
             return letter  # Return the original char, as it`s not a letter
 

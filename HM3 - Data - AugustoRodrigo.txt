@@ -1,0 +1,6 @@
+Solution by Augusto Fonseca and Rodrigo Dornelles. Please check the repo:
+
+
+https://github.com/hertie-data-science-lab/array-based-sequences-augustofonseca25.git
+
+
